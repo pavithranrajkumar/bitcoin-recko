@@ -53,8 +53,8 @@ class BitcoinContainer extends Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div class="card-container">
+                <div style={{width:'400px'}}>
                     <Header currencyData={this.state}/>
                     <BuildControls 
                             bpiData={this.state.bpiData} 

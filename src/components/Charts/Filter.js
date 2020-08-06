@@ -14,10 +14,10 @@ const filters = (props) => {
     const filters=filterValues
         .map(filter=>{
             let fromDate=moment().subtract(filter.val,'months').format('YYYY-MM-DD')
-            return <button key={filter.val} onClick={()=>props.setFilterVal(fromDate)} >{filter.label}</button>
+            return <button class="btn btn-outline-secondary" key={filter.val} onClick={()=>props.setFilterVal(fromDate)} >{filter.label}</button>
         })
     return (
-        <div>
+        <div class="filters">
             {filters}
         </div>
     )

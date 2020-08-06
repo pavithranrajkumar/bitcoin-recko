@@ -49,7 +49,7 @@ const Charts = (props) => {
         <div>
             <Filters setFilterVal={setFilterVal}/>
             <Chart
-                width={400}
+                width={700}
                 height={'300px'}
                 chartType="AreaChart"
                 loader={<div>Loading Chart</div>}
