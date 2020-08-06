@@ -12,4 +12,9 @@ const Header = (props) => {
     )
 }
 
-export default Header
+const checkBaseCurrency = (prevProp,nextProp) =>{
+    return prevProp.currencyData.bpiData[prevProp.currencyData.baseCurrency] && 
+            prevProp.currencyData.baseCurrency == nextProp.currencyData.baseCurrency
+}
+
+export default React.memo(Header,checkBaseCurrency)
