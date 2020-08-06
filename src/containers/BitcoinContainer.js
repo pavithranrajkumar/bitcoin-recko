@@ -31,7 +31,7 @@ class BitcoinContainer extends Component {
 
     bitCoinsHandler = (bitcoins) =>{
         let rate=this.state.bpiData[this.state.baseCurrency].rate_float
-        let currencyVal=bitcoins*rate
+        let currencyVal=(bitcoins*rate).toFixed(2)
         this.setState({
             bitcoins,
             currencyVal
@@ -40,7 +40,7 @@ class BitcoinContainer extends Component {
 
     currencyValHandler = (currencyVal) =>{
         let rate=this.state.bpiData[this.state.baseCurrency].rate_float
-        let bitcoins=currencyVal/rate
+        let bitcoins=(currencyVal/rate).toFixed(2)
         this.setState({
             bitcoins,
             currencyVal
@@ -53,7 +53,7 @@ class BitcoinContainer extends Component {
 
     render() {
         return (
-            <div class="card-container">
+            <div className="card-container">
                 <div style={{width:'400px'}}>
                     <Header currencyData={this.state}/>
                     <BuildControls 

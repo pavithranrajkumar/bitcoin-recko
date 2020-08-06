@@ -4,10 +4,10 @@ const Header = (props) => {
     const {currencyData}=props
     const baseCurrency=currencyData.bpiData[currencyData.baseCurrency]
     return (
-        <div class="header">
-            <p class="header-light">{currencyData.bitcoins} Bitcoin Equals</p>
-            <p class="content">{currencyData.currencyVal} <span>{baseCurrency && baseCurrency.description}</span></p>
-            <p class="header-light">{currencyData.updated}</p>
+        <div className="header">
+            <p className="header-light">{currencyData.bitcoins} Bitcoin Equals</p>
+            <p className="content">{currencyData.currencyVal.toFixed(2)} <span>{baseCurrency && baseCurrency.description}</span></p>
+            <p className="header-light">{currencyData.updated}</p>
         </div>
     )
 }

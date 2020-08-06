@@ -12,11 +12,12 @@ const conversionRates={
     JPY:105.59,
     USD:1
 }
+const fromDate=moment().subtract(1,'month').format('YYYY-MM-DD')
 
 
 const Charts = (props) => {
     const [data,setData] = useState({})
-    const [filterVal,setFilterVal]=useState('')
+    const [filterVal,setFilterVal]=useState(fromDate)
 
     const getData = async () =>{
         let result =  await Axios.get(url)
@@ -47,7 +48,7 @@ const Charts = (props) => {
 
     return (
         <div>
-            <Filters setFilterVal={setFilterVal}/>
+            <Filters filterVal={filterVal} setFilterVal={setFilterVal}/>
             <Chart
                 width={700}
                 height={'300px'}

@@ -6,14 +6,14 @@ const BuildControls = (props) => {
     return (
         <div>
             <div className="control-group">
-                <input type="number" class="form-control" name="bitcoins" value={props.bitcoins} onChange={(e)=>props.bitCoinsHandler(e.target.value)}/>
-                <select name="bitcoin" class="form-control">
+                <input type="number" className="form-control" name="bitcoins" value={props.bitcoins} onChange={(e)=>props.bitCoinsHandler(e.target.value)}/>
+                <select name="bitcoin" className="form-control">
                     <option value="bitcoin">Bitcoin</option>
                 </select>
             </div>
             <div className="control-group">
-                <input type="number" name="currencyVal" class="form-control" value={props.currencyVal} onChange={(e)=>props.currencyValHandler(e.target.value)}/>
-                <select name="currencies" class="form-control" onChange={(e)=>props.baseCurrencyHandler(e.target.value)}>
+                <input type="number" name="currencyVal" className="form-control" value={props.currencyVal} onChange={(e)=>props.currencyValHandler(e.target.value)}/>
+                <select name="currencies" className="form-control" onChange={(e)=>props.baseCurrencyHandler(e.target.value)}>
                     {currencies}
                 </select>
             </div>
