@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-import Header from '../components/header/Header'
+import Header from '../components/Header/Header'
 import BuildControls from '../components/BuildControls/BuildControls'
+import Charts from '../components/Charts/Charts'
 
 class BitcoinContainer extends Component {
     state={
@@ -64,7 +65,7 @@ class BitcoinContainer extends Component {
                             baseCurrencyHandler={this.baseCurrencyHandler}/>
                 </div>
                 <div>
-                    <p>Charts</p>
+                    <Charts currency={this.state.baseCurrency}/>
                 </div>
             </div>
         )
